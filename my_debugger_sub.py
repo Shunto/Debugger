@@ -1,5 +1,5 @@
 ﻿from ctypes import *
-from my_debugger_defines import *
+from my_debugger_defines_sub import *
 
 kernel32 = windll.kernel32
 
