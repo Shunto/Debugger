@@ -1,5 +1,5 @@
 import my_debugger_sub
-from my_debugger_defines import *
+from my_debugger_defines_sub import *
 
 debugger = my_debugger_sub.debugger()
 
