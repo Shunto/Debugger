@@ -3,8 +3,6 @@ from my_debugger_defines import *
 
 kernel32 = windll.kernel32
 
-PROCESS_ALL_ACCESS = 0x001F0FFF
-
 class debugger():
     def __init__(self):
 	self.h_process       = None
@@ -43,7 +41,7 @@ class debugger():
 	    
     def open_process(self,pid):
 
-	h_process = kernel32.OpenProcess(PROCESS_ALL_ACCESS,False,pid)
+	h_process = kernel32.OpenProcess(kernel32.PROCESS_ALL_ACCESS,False,pid)
 	return h_process
 
     def attach(self,pid):
@@ -81,7 +79,7 @@ class debugger():
 	    print "[*] Finished debugging. Exiting..."
 	    return True
 	else:
-	    print "There was an error"
+	    print "There was an error."
 	    return False
 		 
 	
