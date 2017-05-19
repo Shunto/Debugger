@@ -78,8 +78,8 @@ class debugger():
 	    if kernel32.DebugActiveProcessStop(self.pid):
 		print "[*] Finished debugging. Exiting..."
 		return True
-	     else:
-		 print "There was an error"
-		 return False
+	    else:
+		print "There was an error"
+		return False
 		 
 	
