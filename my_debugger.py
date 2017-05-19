@@ -3,6 +3,8 @@ from my_debugger_defines import *
 
 kernel32 = windll.kernel32
 
+PROCESS_ALL_ACCESS = 0x001F0FFF
+
 class debugger():
     def __init__(self):
 	self.h_process       = None
