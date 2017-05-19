@@ -75,13 +75,13 @@ class debugger():
 		debug_event.dwThreadId,
 		continue_status )
 
-	def detach(self):
+    def detach(self):
 	
-	    if kernel32.DebugActiveProcessStop(self.pid):
-		print "[*] Finished debugging. Exiting..."
-		return True
-	    else:
-		print "There was an error"
-		return False
+	if kernel32.DebugActiveProcessStop(self.pid):
+	    print "[*] Finished debugging. Exiting..."
+	    return True
+	else:
+	    print "There was an error"
+	    return False
 		 
 	
