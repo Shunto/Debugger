@@ -8,7 +8,7 @@ def check_accessv(dbg):
     if dbg.dbg.u.Exception.dwFirstChance:
 	return DBG_EXCEPTION_NOT_HANDLED
 
-    crash_bin = utils.crash_binning.crach_binning()
+    crash_bin = utils.crash_binning.crash_binning()
     crash_bin.record_crash(dbg)
     print crash_bin.crash_synopsis()
 
