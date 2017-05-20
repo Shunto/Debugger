@@ -9,7 +9,7 @@ def printf_randomizer(dbg):
     counter = dbg.read_process_memory(parameter_addr, 4)
 
     counter = struct.unpack("L",counter)[0]
-    print "Counter: %d % int(counter)
+    print "Counter: %d" % int(counter)
 
     random_counter = random.randint(1,100)
     random_counter = struct.pack("L",random_counter)[0]
