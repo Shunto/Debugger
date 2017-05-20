@@ -5,7 +5,7 @@ import random
 
 def printf_randomizer(dbg):
 
-    prameter_addr = dbg.context.Esp + 0x8
+    parameter_addr = dbg.context.Esp + 0x8
     counter = dbg.read_process_memory(parameter_addr, 4)
 
     counter = struct.unpack("L",counter)[0]
