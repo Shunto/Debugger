@@ -1,0 +1,11 @@
+from immlib import *
+
+def main(args):
+
+    imm = Debugger()
+
+    bad_char_found = False
+
+    address = int(args[0],16)
+
+    

@@ -35,7 +35,7 @@ def danger_handler(dbg):
 
     return DBG_CONTINUE
 
-def access_violaiton_handler(dbg):
+def access_violation_handler(dbg):
     global crash_encountered
 
     if dbg.dbg.u.Exception.dwFirstChance:
