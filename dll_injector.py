@@ -16,7 +16,7 @@ if not h_process:
     print "[*] Couldn't acquire a handle to PID: %s" % pid
     sys.exit(0)
 
-arg_address = kernel32.VirtualAllocEx(h_process, 0, dll_len, VIRTUAL_MEM  PAGE_READWRITE)
+arg_address = kernel32.VirtualAllocEx(h_process, 0, dll_len, VIRTUAL_MEM,  PAGE_READWRITE)
 
 written = c_int(0)
 kernel32.WriteProcessMemory(h_process, arg_address, dll_path, dll_len, byref(written))
@@ -36,5 +36,5 @@ if not kernel32.CreateRemoteThread(h_process,
     print "[*] Failed to inject the DLL. Exiting."
     sys.exit(0)
 
-print "[*] Remote thread with ID 0x%08x created." thread_id.value
+print "[*] Remote thread with ID 0x%08x created." % thread_id.value
     
