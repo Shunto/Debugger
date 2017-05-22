@@ -11,4 +11,6 @@ shellcode_buffer = ctypes.create_string_buffer(shellcode, len(shellcode))
 
 shellcode_func = ctypes.cast(shellcode_buffer, ctypes.CFUNCTYPE(ctypes.c_void_p))
 
+raw_input("Once the debugger is attached, press any key to run shellcode.")
+
 shellcode_func()
