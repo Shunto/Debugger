@@ -7,7 +7,7 @@ PAGE_EXECUTE_READWRITE = 0x00000040
 PROCESS_ALL_ACCESS = (0x000F0000 | 0x00100000 | 0xFFF)
 VIRTUAL_MEM = (0x1000 | 0x2000)
 
-path_to_exe = "C:\\calc.exe"
+path_to_exe = "C:/Users/mizushimashunto/hacker/Debugger/calc.exe"
 
 startupinfo = STARTUPINFO()
 process_information = PROCESS_INFORMATION()
